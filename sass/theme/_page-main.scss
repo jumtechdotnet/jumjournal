@@ -1,0 +1,9 @@
+.page.main-content {
+  padding: 3.125rem 0;
+}
+// Bellow 576px
+@media (max-width: 575.98px) {
+  .page.main-content {
+    padding: 2rem 0;
+  }
+}

@@ -1,0 +1,160 @@
+ul.controls {
+
+  li {
+
+    &:first-child a {
+      border-top: thin solid;
+      border-color: #ddd;
+    }
+
+    a {
+      text-transform: capitalize;
+      color: $black;
+      opacity: $opacity;
+      padding: 0.875rem 1.5rem;
+      display: block;
+      border-right: thin solid;
+      border-bottom: thin solid;
+      border-color: #ddd;
+      i {
+        font-size: 1.25rem;
+        margin-right: 0.5rem;
+      }
+    }
+
+    &:focus, &:hover {
+      a, i {
+        color: #fff !important;
+      }
+    }
+    
+    &:nth-child(1) { 
+      i {
+        color: $color-one;
+      }
+      &:focus, &:hover {
+        a {
+          background-color: $color-one;
+        }
+      }
+    }
+    
+    &:nth-child(2) { 
+      i {
+        color: $color-two;
+      }
+      &:focus, &:hover {
+        a {
+          background-color: $color-two;
+        }
+      }
+    }
+    
+    &:nth-child(3) { 
+      i {
+        color: $color-three;
+      }
+      &:focus, &:hover {
+        a {
+          background-color: $color-three;
+        }
+      }
+    }
+    
+    &:nth-child(4) { 
+      i {
+        color: $color-four;
+      }
+      &:focus, &:hover {
+        a {
+          background-color: $color-four;
+        }
+      }
+    }
+    
+    &:nth-child(5) { 
+      i {
+        color: $color-five;
+      }
+      &:focus, &:hover {
+        a {
+          background-color: $color-five;
+        }
+      }
+    }
+    
+    &:nth-child(6) { 
+      i {
+        color: $color-six;
+      }
+      &:focus, &:hover {
+        a {
+          background-color: $color-six;
+        }
+      }
+    }
+    
+    &:nth-child(7) { 
+      i {
+        color: $color-seven;
+      }
+      &:focus, &:hover {
+        a {
+          background-color: $color-seven;
+        }
+      }
+    }
+    
+    &:nth-child(8) { 
+      i {
+        color: $color-eight;
+      }
+      &:focus, &:hover {
+        a {
+          background-color: $color-eight;
+        }
+      }
+    }
+    
+    &:nth-child(9) { 
+      i {
+        color: $color-nine;
+      }
+      &:focus, &:hover {
+        a {
+          background-color: $color-nine;
+        }
+      }
+    }
+
+    
+
+  } // li
+
+}
+
+.control-sidebar.sticky-top {
+  padding-top: 2.25rem;
+}
+.privacy-article {
+  margin: 1rem 0;
+  padding-top: 1rem;
+  display: inline-block;
+  h1 {
+    font-size: 1.5rem;
+  }
+  .content {
+    h2 {
+      font-size: 1.125rem;
+    }
+    h3 {
+      font-size: 1rem;
+    }
+  }
+
+}
+
+.last-upadated {
+  font-style: italic;
+  font-weight: 500;
+}

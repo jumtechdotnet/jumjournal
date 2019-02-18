@@ -1,0 +1,502 @@
+.ul-none {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.ul-none.horizontal li {
+  display: inline;
+}
+
+// Header Navigations
+// Div Navigation
+.site-div-nav, .div-nav,
+.div-nav-control {
+  background-color: $header-bg-dark;
+}
+.site-div-nav {
+  height: 4px;
+  position: relative;
+  transition: 0.5s;
+}
+.div-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    float: left;
+    position: relative;
+    &:focus, &:hover {
+      background-color: $dark-light;
+      opacity: $no-opacity;
+    }
+  }
+  a {
+    color: $white;
+    font-weight: 500;
+    opacity: $opacity-light;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    line-height: 40px;
+    display: block;
+    padding: 0 2rem;
+    letter-spacing: 0.1rrem;
+  }
+}
+// Submenu itrems
+.div-nav .sub-menu {
+  position: absolute;
+  z-index: 99;
+  top: -400px;
+  left: 0;
+  background-color: $dark-light;
+  width: 200px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    width: 100%;
+    &:focus, &:hover {
+      background-color: $dark;
+    }
+  }
+  a {
+    text-transform: capitalize;
+    font-weight: 400;
+  }
+
+}
+// display sub-menu on hover
+.div-nav li:hover .sub-menu {
+  top: 40px;
+}
+// click area
+.div-nav-control {
+  border-radius: 0 0 0.375rem 0.375rem;
+  padding: 0 0.875rem;
+  font-size: 0.75rem;
+  color: $white;
+  height: 26px;
+  line-height: 26px;
+  cursor: pointer;
+  margin-top: 4px;
+  margin-left: -76px;
+  transition: 0.5s;
+  float: left;
+  span {
+    text-transform: uppercase;
+  }
+}
+// Show hide effect
+.site-div-nav .div-nav {
+  display: none;
+}
+.site-div-nav.active {
+  height: 40px;
+  transition: 0.5s;
+  .div-nav {
+    display: block;
+    animation: fadein 1s;
+    @keyframes fadein {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  }
+  .div-nav-control {
+    margin-top: 40px;
+    transition: 0.5s;
+  }
+}
+// User nav
+#user-nav {
+  float: right;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+
+  li {
+    text-align: center;
+    float: left;
+    margin-left: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    opacity: $opacity-light;
+
+    &:focus, &:hover {
+      opacity: $no-opacity;
+    }
+
+  }
+  a {
+    font-size: 0.75rem;
+    color: $white;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    i {
+      color: $primary;
+      font-size: 1rem;
+      background-color: $white;
+      padding: 0.25rem;
+      border-radius: 50%;
+      height: 22px;
+      width: 22px;
+      box-shadow: $dp4;
+    }
+  }
+
+
+  //  Submenu css
+  .sub-menu {
+    background-color: #0A8967;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 0.5rem 0;
+    width: 150px;
+    position: absolute;
+    z-index: 12;
+    left: 50%;
+    top: 2.75rrem;
+    margin-left: -4.675rem;
+    // show hide magic 
+    display: none;
+
+    li {
+      display: inline;
+      margin-left: 0;
+    }
+
+    a {
+      display: block;
+      width: 148px;
+      font-size: 12px;
+      color: $white;
+      line-height: 0.75rem;
+      padding: 10px 0;
+      text-decoration: none;
+      
+      &:focus, &:hover {
+        background-color: $primary;
+      }
+    }
+
+    // Submenu arrow
+    &:before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-left: 0.5rrem solid transparent;
+      border-right: 0.5rrem solid transparent;
+      border-bottom: 0.5rrem solid #fff;
+      position: absolute;
+      z-index: 9;
+      left: 50%;
+      top: -0.5rrem;
+      margin-left: -0.5rrem;
+    }
+  }
+  // Fix last itrem issue
+  li:last-child .sub-menu {
+    left: -60%;
+    &:before {
+      left: 84%;
+    }
+  }
+  // Show hide submenu
+  // li.active {
+  //   opacity: 1;
+  //   .sub-menu {
+  //     display: block;
+  //     li {
+  //       opacity: 1;
+  //     }
+  //   }
+  // }
+  li:focus, li:hover {
+    opacity: 1;
+    .sub-menu {
+      display: block;
+      li {
+        opacity: 1;
+      }
+    }
+  }
+
+}
+
+// Footer navs
+// Type two
+.footer-nav.nav-two {
+  margin-top: 1.5rem;
+  a {
+    color: $primary;
+    margin: 0 16px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding-bottom: .125rem;
+    border-bottom: 2px solid transparent;
+    display: inline-block;
+
+    &:focus, &:hover {
+      border-bottom: 2px solid $primary;
+    }
+  }
+}
+
+// Mobile menu
+.mobile-sidebar {
+  background-color: $mb-menu-bg;
+  position: fixed;
+  overflow-y: scroll;
+  top: 0;
+  z-index: 1000;
+  height: 100vh;
+}
+.mobile-sidebar.left {
+  box-shadow: 1px 0 2px 0 $primary-light;
+  left: -250px;
+  width: 250px;
+  transition:0.5s;
+  // rremove menu separator
+  .mobile-sidebar-widget:nth-child(2){
+    border-top: 0;
+  }
+}
+// Hide scrollbar webkit browsers
+#mbl-side-bar-left::-webkit-scrollbar {
+  display: none;
+}
+#mbl-side-bar-left{
+  -ms-overflow-style: none;  // IE 10+
+  // overflow: -moz-scrollbars-none !important;  // Firefox
+  }
+ 
+.mobile-sidebar.right {
+  box-shadow: -1px 0 2px 0 $primary-light;
+  right: -300px;
+  width: 300px;
+  transition: 0.5s;
+
+  // Right menu adjustment
+  .mobile-nav {
+    a {
+      text-transform: capitalize;
+      font-weight: 400;
+    }
+  }
+}
+
+.mobile-sidebar-widget {
+  border-top: $border-top;
+  box-shadow: $box-shadow;
+  display: inline-block;
+  width: 100%;
+}
+// Left sidebar
+.sidebar-logo {
+  background-color: $primary;
+  padding: 16px;
+  img {
+    height: 42px;
+  }
+}
+// left menu
+.mobile-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+  width: 100%;
+
+  li {
+    width: 100%;
+    padding: 2px 8px 0 16px;
+    border-bottom: 1px solid #ddd;
+    float: left;
+    &:last-child {
+      border-bottom: 0;
+    }
+
+  }
+  a {
+    color: $primary;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+    width: 84%;
+    padding: 8px 0;
+
+    &:focus, &:hover {
+      text-decoration: none;
+    }
+  }
+  .menu-itrem-has-children {
+    .plus-sign {
+      background-color: #888;
+      color: #fff;
+      width: 15%;
+      font-size: 24px;
+      text-align: center;
+    }
+  }
+  .sub-menu {
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li:first-child {
+      border-top: 1px solid #ddd;
+    }
+    li:last-child {
+      border-bottom: 0;
+    }
+    a {
+      text-transform: capitalize;
+    }
+  }
+
+}
+.mobile-nav li > a, .mobile-nav li .plus-sign {
+  float: left;
+}
+// cross sign for left
+.hide-nav {
+  position: relative;
+  i {
+    color: $mb-menu-font;
+    opacity: $opacity-thin;
+    position: absolute;
+    right: 16px;
+    top: 25px;
+    z-index: 100;
+    font-size: 24px;
+    padding: 4px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:focus, &:hover {
+      opacity: $opacity-light;
+    }
+  }
+}
+
+// Mobile menu expand icon 
+.mobile-sidebar-expand {
+  display: inline-block;
+  width: 100%;
+  i {
+    color: $white;
+    opacity: $opacity-light;
+    font-size: 24px;
+    padding: 5px 7px;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 36px;
+    width: 36px;
+
+    &:focus, &:hover {
+      opacity: $no-opacity;
+    }
+  }
+
+  &.right {
+    text-align: right;
+    i {
+      text-align: center;
+    }
+  }
+}
+
+// User Bio: Right sidebar
+.user-bio {
+  //height: 160px;
+  background-color: #4b55be;
+  display: inline-block;
+  width: 100%;
+  padding: 16px 24px;
+
+  .user-avatar {
+    
+    img {
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      box-shadow: 0 0 3px #eee;
+    }
+  }
+  .user-info {
+    margin-top: 8px;
+    text-transform: capitalize;
+  }
+  .user-name {
+    font-size: 14px;
+
+    color: $white;
+    margin-bottom: 4px;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+  .user-rank {
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+  .ul-none {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer.type-two {
+    .footer-nav {
+      margin-top: .5rem;
+      flex-direction: row;
+    }
+    .footer-nav.nav-two a {
+      margin: 0;
+      padding-bottom: .5rem;
+      padding-top: .5rem;
+      display: inline-block;
+    }
+  }
+}
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+
+}
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .div-nav-control {
+    margin-left: -2rem !important;
+  }
+  .div-nav a {
+    font-size: 0.675rem;
+    padding: 0 0.875rem;
+  }
+}
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .div-nav-control {
+    margin-left: -2rem !important;
+  }
+  .div-nav a {
+    padding: 0 1rem;
+  }
+}

@@ -1,0 +1,237 @@
+.jumjournal-hero {
+  background-image: url("../images/hero-image-1x.jpg");
+
+  .leader {
+    img {
+      height: 260px;
+    }
+  }
+  .btn-btn {
+    margin-top: 1rem;
+    a {
+      margin-bottom: 0;
+    }
+    a:first-child {
+      margin-right: 1.75rem;
+    }
+  }
+}
+.jumjournal-hero.page-header {
+  padding-top: 2rem;
+  .heading {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.125rem;
+    padding-bottom: .5rem;
+    margin-bottom: .5rem;
+  }
+  .moto {
+    display: inline-block;
+    width: 65%;
+    text-transform: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.125rem;
+    letter-spacing: 0;
+    line-height: 1.5;
+  }
+}
+
+// Home Nav Box
+.home-nav-box {
+  padding: 2rem 0;
+}
+.nav-box {
+  width: 130px;
+  height: 130px;
+  background-color: $box-nav-bg;
+  box-shadow: $dp4;
+  display: flex;
+  flex-direction: column;
+  align-itrems: center;
+  justify-content: center;
+  color: $grey;
+  border-radius: .25rem;
+
+  &:focus, &:hover {
+    box-shadow: $dp16;
+    color: $logo-color;
+    i {
+      color: $logo-color;
+    }
+  }
+
+  i {
+    font-size: 2rem;
+    margin-bottom: .25rem;
+    color: $grey;
+  }
+  span {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: .875rem;
+  }
+}
+.nav-box-link {
+  text-decoration: none;
+  display: inline-block;
+  margin: 1rem;
+  &:focus, &:hover {
+    text-decoration: none;
+  }
+}
+
+// Site Features
+.site-features {
+  background-image: url(../images/lake-bg-1x.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 3rem 0;
+  text-align: center;
+  position: relative;
+
+  .frame-design {
+    background-image: url(../images/hcircles-1x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: inline-block;
+    height: 620px;
+    width: 480px;
+    max-width: 100%;
+  }
+}
+.frame-design {
+  position: relative;
+  .frame-text {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    padding: 1.5rem 1rem;
+    //background-color: red;
+    position: absolute;
+    z-index: 9;
+    h2 {
+      text-transform: uppercase;
+      font-size: 1.375rem;
+      letter-spacing: 2px;
+    }
+    p {
+      margin-bottom: 0;
+      font-size: 0.875rem;
+    }
+  }
+
+}
+.frame-text.one {
+  top: 8px;
+  left: 98px;
+  h2 {
+    color: $circle-one;
+  }
+} 
+.frame-text.two {
+  top: 240px;
+  left: 65px;
+  h2 {
+    color: $circle-two;
+  }
+} 
+.frame-text.three {
+  top: 364px;
+  left: 260px;
+  h2 {
+    color: $circle-three;
+  }
+}
+// Daba Image
+.daba {
+  background-image: url(../images/daba-1x.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 180px;
+  width: 180px;
+  position: absolute;
+  z-index: 9;
+  bottom: -3.375rem;
+  right: 4rem;
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+  
+  .jumjournal-hero .leader img {
+    height: 200px;
+  }
+  .jumjournal-hero.page-header .heading {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .jumjournal-hero.page-header .moto {
+    width: 95%;
+  }
+  .site-features .frame-design {
+    background-image: none;
+    height: auto;
+    width: 100%;
+  }
+  .frame-text.one, .frame-text.two, .frame-text.three {
+    top: 0;
+    left: 0;
+    float: left;
+    background-color: #fff;
+  }
+  .frame-text.one {
+    border-color: #F5A657 !important;
+  } 
+  .frame-text.two {
+    float: right;
+    border-color: #74BF43 !important;
+    margin-top: -1rem;
+  } 
+  .frame-text.three {
+    border-color: #E83B33 !important;
+    margin-top: 1rem;
+  }
+  .daba {
+    right: 0;
+  }
+  .frame-design .frame-text {
+    width: 220px;
+    height: 220px;
+    padding: 2rem 1rem;
+    position: relative;
+    border: 8px solid;
+  }
+  .jumjournal-hero .btn-btn a:first-child {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  .ul-none.platforms {
+    flex-direction: row;
+  }
+  .footer-sub.social .widget-sub {
+    border-bottom: 1px solid $primary;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+  .footer-sub.social .col-md-4:last-child .widget-sub {
+    border: none;
+    margin: 0;
+  }
+}
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  .frame-text.three {
+    margin-top: -1rem;
+  }
+}
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+}
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+}

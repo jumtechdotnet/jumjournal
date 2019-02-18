@@ -1,0 +1,105 @@
+.searched-for {
+  padding: 1rem;
+  border-bottom: 0.125rem dotted #ddd;
+  background-color: #F2F2F2;
+
+  .query-title {
+    font-size: 1.125rem;
+    opacity: $opacity-light;
+    font-weight: 400;
+    margin-bottom: 0;
+    span {
+      opacity: $no-opacity;
+      font-weight: 600;
+    }
+    
+  }
+}
+.search-results {
+  article {
+    border-bottom: 1px solid #ddd;
+    padding: 1rem;
+    &:focus, &:hover {
+      box-shadow: $dp2;
+      border-bottom: 1px solid transparent;
+      background-color: #F2F2F2;
+    }
+
+    .entry-summary {
+      p:last-child {
+        display: none;
+      }
+    }
+    .entry-title {
+      font-size: 1rem;
+    }
+    .entry-footer {
+      font-size: 0.875rem;
+      span {
+        margin-right: 1rem;
+        i {
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+}
+
+// Nothing Found
+.no-results {
+  .page-header {
+    text-align: center;
+    border-radius: 0.375rem 0.375rem 0 0;
+    padding: 2rem 0;
+    .page-title {
+      margin: 0;
+    }
+  }
+  .page-content {
+    padding: 1rem;
+  }
+}
+// Searchform
+.site-searchform {
+  box-shadow: $dp4;
+  border-radius: 2px;
+  display: inline-block;
+  margin-top: .25rem;
+  width: 100%;
+  input {
+    border: 0;
+    height: 32px;
+    height: 2rem;
+    font-size: 14px;
+    padding: 0 1rem;
+  }
+  input[type="text"] {
+    width: 360px;
+    border-radius: 2px 0 0 2px;
+    background-color: $white;
+    opacity: $opacity-light;
+  }
+  input[type="submit"] {
+    //background-color: $white;
+    background-image: url(../images/site-icons/icon-search.png);
+    opacity: $opacity-light;
+    border-radius: 0 2px 2px 0;
+    margin-left: 0;
+    cursor: pointer;
+    position: relative;
+    text-indent: -9999px;
+    width: 64px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  input[type="text"], input[type="submit"] {
+    float: left;
+  
+    &:focus, &:hover {
+      outline: 0;
+      border: 0;
+      box-shadow: none;
+    }
+  }
+}

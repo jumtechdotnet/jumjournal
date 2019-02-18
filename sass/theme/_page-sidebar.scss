@@ -1,0 +1,67 @@
+// .sidebar {
+//   padding: 1rem;
+// }
+.sidebar.sticky-top {
+  padding-top: 1rem;
+}
+.sidebar-widget.widget.dashed h2 {
+  border-bottom: 1px dashed $dark;
+  padding-bottom: 0.5rem;
+  padding-left: 0.875rem;
+}
+.sidebar-widget.widget {
+  h2 {
+    font-size: 1.125rem;
+    opacity: $opacity;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  ul {
+    li {
+      a {
+        color: $dark;
+        opacity: $opacity-light;
+        display: block;
+        padding: 0.5rem 1rem 0.5rem 0;
+        border-radius: 0.125rem;
+        display: flex;
+        flex-direction: row;
+        &:focus, &:hover {
+          opacity: $no-opacity;
+          box-shadow: $dp4;
+          color: $primary;
+        }
+        i {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 2.5rem;
+        }
+      }
+    }
+  }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+  .sidebar-widget.widget {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .ul-none.quick-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+
+}
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+}
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+}

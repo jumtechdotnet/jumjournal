@@ -1,0 +1,47 @@
+// All variables first from threme
+@import "theme/variables";
+// Loads WooCommerce style fixes.
+@import "understrap/woocommerce";
+
+// Underscores media styles
+@import "underscores/captions";
+@import "underscores/galleries";
+@import "underscores/media";
+
+// The design all scss and partials
+// Fix
+@import "theme/variables";
+@import "theme/elements";
+@import "theme/body";
+// Header
+@import "theme/header";
+@import "theme/navigation";
+// Page
+@import "theme/home";
+@import "theme/blog";
+@import "theme/page-headings";
+@import "theme/page-main";
+@import "theme/page-sidebar";
+@import "theme/photo-gallery";
+@import "theme/about";
+// Footer
+@import "theme/footer";
+// Submit page
+@import "theme/submit";
+// Post
+@import "theme/post-single";
+@import "theme/post-category";
+@import "theme/search";
+@import "theme/pagination";
+@import "theme/privacy";
+
+
+
+// Archives
+@import "theme/audio";
+@import "theme/library";
+
+
+
+// Contact Form 7 - Bootstrap 4 support
+@import "theme/contact-form7";

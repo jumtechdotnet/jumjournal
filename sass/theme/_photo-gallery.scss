@@ -1,0 +1,253 @@
+// Photo Gallery Navigation
+.photo-gallery-navigation {
+  background-color: $primary;
+  &.sticky-top {
+    box-shadow: 0 3px 6px $primary-light;
+  }
+}
+.grid-nav {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+
+  .grid-itrem-nav {
+    padding: 0.5rem 2rem;
+    display: inline-block;
+    cursor: pointer;
+    color: $white;
+    text-transform: capitalize;
+    border: none;
+    background-color: transparent;
+    opacity: $opacity-light;
+
+    &:focus, &:hover {
+      background-color: $primary-light;
+      transition: 0.5s;
+      outline: none;
+    }
+  }
+
+}
+
+/* ---- grid ---- */
+.grid {
+  background: transparent;
+  width: 100%;
+}
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-itrem ---- */
+.grid-sizer,
+.grid-itrem {
+  width: 19.5%;
+  margin-bottom: 0.375rem;
+}
+
+.grid-itrem {
+  float: left;
+}
+
+.grid-itrem img {
+  display: block;
+  width: 100%;
+}
+
+// Infinite Scroll
+/* reveal grid after images loaded */
+.grid.are-images-unloaded {
+  opacity: 0;
+}
+
+.grid-gutter-sizer { width: 0.5%; }
+
+/* hide by default */
+.grid.are-images-unloaded .image-grid-itrem {
+  opacity: 0;
+}
+.page-load-status {
+  display: none; /* hidden by default */
+  padding-top: 20px;
+  text-align: center;
+  color: #777;
+}
+// Loader
+.loader-ellips {
+  font-size: 20px; /* change size here */
+  position: relative;
+  width: 4rem;
+  height: 1rem;
+  margin: 10px auto;
+}
+
+.loader-ellips__dot {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.5rem;
+  background: #555; /* change color here */
+  position: absolute;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+.loader-ellips__dot:nth-child(1),
+.loader-ellips__dot:nth-child(2) {
+  left: 0;
+}
+.loader-ellips__dot:nth-child(3) { left: 1.5rem; }
+.loader-ellips__dot:nth-child(4) { left: 3rem; }
+
+@keyframes reveal {
+  from { transform: scale(0.001); }
+  to { transform: scale(1); }
+}
+
+@keyframes slide {
+  to { transform: translateX(1.5rem) }
+}
+
+.loader-ellips__dot:nth-child(1) {
+  animation-name: reveal;
+}
+
+.loader-ellips__dot:nth-child(2),
+.loader-ellips__dot:nth-child(3) {
+  animation-name: slide;
+}
+
+.loader-ellips__dot:nth-child(4) {
+  animation-name: reveal;
+  animation-direction: reverse;
+}
+// Loader ends
+
+
+// Single Photo
+.site-photo .post-content-main {
+  padding: 1rem;
+  img {
+    border-radius: 0.375rem;
+  }
+}
+.site-photo-lightbox .post-content-main {
+  padding: 0;
+  border-radius: 0;
+  img {
+    border-radius: 0;
+  }
+}
+.type-photo {
+  .photo-information {
+    .caption {
+      margin-top: 1rem;
+      i {
+        margin-left: 1.5rem;
+        margin-right: 0.125rem;
+      }
+    }
+  }
+}
+
+// Lightbox
+.type-photo-lightbox {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: 2rem auto;
+  background-color: #fff;
+  height: 90%;
+}
+
+.photo-itself {
+  width: 70%;
+}
+.photo-itself img {
+  width: 100%;
+}
+.photo-information {
+  width: 30%;
+  padding: 1rem;
+}
+
+// Lightbox Plugin Styles
+/* padding-bottom and top for image */
+.mfp-no-margins img.mfp-img {
+  padding: 0;
+}
+/* position of shadow behind the image */
+.mfp-no-margins .mfp-figure:after {
+    top: 0;
+    bottom: 0;
+}
+/* padding for main container */
+.mfp-no-margins .mfp-container {
+    padding: 0;
+}
+
+
+/* 
+
+for zoom animation 
+uncomment this part if you haven't added this code anywhere else
+
+*/
+/*
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+    opacity: 0;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: all 0.3s ease-out; 
+    -moz-transition: all 0.3s ease-out; 
+    -o-transition: all 0.3s ease-out; 
+    transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+        opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+        opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-rremoving .mfp-container, 
+.mfp-with-zoom.mfp-rremoving.mfp-bg {
+    opacity: 0;
+}
+*/
+
+/* Zoom Gallery */
+.image-source-link {
+    color: #98C3D1;
+}
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+    opacity: 0;
+    -webkit-backface-visibility: hidden;
+    /* ideally, transition speed should match zoom duration */
+    -webkit-transition: all 0.3s ease-out; 
+    -moz-transition: all 0.3s ease-out; 
+    -o-transition: all 0.3s ease-out; 
+    transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+        opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+        opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-rremoving .mfp-container, 
+.mfp-with-zoom.mfp-rremoving.mfp-bg {
+    opacity: 0;
+}
+

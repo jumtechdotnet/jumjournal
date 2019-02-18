@@ -1,0 +1,40 @@
+.theme-pagination {
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  width: 100%;
+
+
+  .pagination {
+    margin-bottom: 0;
+    li a, span {
+      border: none;
+      border-radius: 50%;
+    }
+    .page-link {
+      line-height: 2.25rem;
+      height: 2.25rem;
+      width: 2.25rem;
+      display: inline-block;
+      padding: 0;
+      text-align: center;
+      color: $primary;
+      margin: 0 1px;
+      &:focus, &:hover {
+        background-color: $primary-light;
+        color: #fff;
+      }
+      &.current {
+        background-color: $primary;
+        color: #fff;
+      }
+
+    }
+  }
+  .page-item:first-child .page-link, 
+  .page-item:last-child .page-link {
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+  }
+}

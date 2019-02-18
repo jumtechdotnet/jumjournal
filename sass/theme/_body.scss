@@ -1,0 +1,83 @@
+body {
+  background-color: $bg-body;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+// Font family
+button {
+  font-family: 'Roboto', sans-serif;
+}
+
+// Links
+a {
+  color: $primary-light;
+
+  &:focus, &:hover {
+    color: $primary-light;
+    text-decoration: none;
+    opacity: $opacity;
+  }
+}
+// Images
+img, figure {
+  max-width: 100%;
+}
+.img-responsive {
+  display: inline-block;
+  max-width: 100%;
+}
+
+// Support center
+.support-center {
+  position: fixed;
+  z-index: 9;
+  right: -74px;
+  transition: 0.5s;
+  bottom: 4rem;
+  background-color: $grey;
+  color: $white;
+  display: flex;
+  flex-direction: row;
+  border-radius: 0.125rem 0 0 0.125rem;
+  box-shadow: $dp8;
+  opacity: $opacity;
+
+  &:focus, &:hover {
+    color: $white;
+    box-shadow: $dp16;
+    opacity: $no-opacity;
+  }
+
+  i {
+    font-size: 1.375rem;
+    cursor: pointer;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+  }
+  a {
+    font-size: 0.625rem;
+    color: $white;
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.125rem;
+    padding: 0.5rem;
+  }
+}
+.support-center.active {
+  right: 0;
+  transition: 0.5s;
+}
+// Reset class
+.no-padding {
+  padding: 0 !important;
+}
+.no-margin {
+  margin: 0 !important;
+}
+
+// Pagination
+.load-more-pagination {
+  text-align: center;
+}
