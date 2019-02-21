@@ -15,7 +15,7 @@ $container = get_theme_mod( 'jumtechWP_container_type' );
 ?>
 
   <!-- slider -->
-	<div class="posts-block block-one">
+	<div class="posts-block block-one mt-5">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8">
