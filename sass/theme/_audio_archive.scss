@@ -1,0 +1,71 @@
+.tracks-table {
+  tr td:first-child {
+    max-width: 3rem;
+  }
+}
+
+// play now button: track
+.fap-play-button {
+  height: auto;
+  background-color: $primary;
+  margin-top: 0.5rem;
+
+  &:focus, &:hover {
+    height: auto;
+    background-color: $primary;
+    opacity: $opacity;
+    margin-top: 0.5rem;
+  }
+}
+
+// Category page: tracks
+.track-list {
+  margin-top: 2rem;
+  .single-track:first-child {
+    border-top: $border-bottom;
+  }
+}
+// single track: category page
+.single-track {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  border-bottom: $border-bottom;
+
+  .fap-play-button {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .text {
+      display: none;
+    }
+    .fap-icon-play {
+      margin: 0;
+    }
+  }
+
+  .track-play-btn {
+    width: 10%;
+  }
+  .track-title {
+    width: 30%;
+  }
+  .track-artist {
+    width: 20%;
+  }
+  .track-album {
+    width: 20%;
+  }
+  .track-genre {
+    width: 20%;
+  }
+
+
+}
+
